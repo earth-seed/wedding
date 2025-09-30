@@ -6,6 +6,9 @@ import ceremonyImage from "@assets/generated_images/Wedding_ceremony_setup_Medit
 import oliveImage from "@assets/generated_images/Olive_grove_landscape_Turkey_69daa26c.png";
 import dinnerImage from "@assets/generated_images/Wedding_dinner_reception_setup_0cdafc3e.png";
 import boatImage from "@assets/generated_images/Coastal_boat_ride_activity_2d04e6b9.png";
+import oliveBranch1 from "@assets/stock_images/watercolor_olive_bra_3ed55f45.jpg";
+import oliveBranch2 from "@assets/stock_images/watercolor_olive_bra_2b145fc8.jpg";
+import florals from "@assets/stock_images/watercolor_mediterra_b6492684.jpg";
 
 export default function Home() {
   const galleryItems = [
@@ -46,9 +49,19 @@ export default function Home() {
         alt="Akyaka coastline at sunset"
       />
 
-      <div className="py-20 px-6">
-        <div className="max-w-3xl mx-auto text-center space-y-6">
-          <h1 className="text-5xl md:text-6xl font-serif" data-testid="text-hero-title">
+      <div className="relative py-20 px-6">
+        <img 
+          src={oliveBranch1} 
+          alt="" 
+          className="absolute top-0 left-0 w-32 md:w-48 opacity-30 pointer-events-none"
+        />
+        <img 
+          src={oliveBranch2} 
+          alt="" 
+          className="absolute top-0 right-0 w-32 md:w-48 opacity-30 pointer-events-none transform scale-x-[-1]"
+        />
+        <div className="max-w-3xl mx-auto text-center space-y-6 relative z-10">
+          <h1 className="text-5xl md:text-7xl font-serif" data-testid="text-hero-title">
             Bryce & Leyla
           </h1>
           <p className="text-2xl md:text-3xl text-muted-foreground" data-testid="text-hero-subtitle">
