@@ -43,28 +43,36 @@ export default function Home() {
     <div>
       <HeroSection
         backgroundImage={heroImage}
-        title="Bryce & Leyla"
-        subtitle="are getting married"
-        date="October 1, 2026"
-        location="Akyaka, Turkiye"
-        ctaText="Learn More"
-        ctaAction={() => {
-          window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
-        }}
+        alt="Akyaka coastline at sunset"
       />
+
+      <div className="py-20 px-6">
+        <div className="max-w-3xl mx-auto text-center space-y-6">
+          <h1 className="text-5xl md:text-6xl font-serif" data-testid="text-hero-title">
+            Bryce & Leyla
+          </h1>
+          <p className="text-2xl md:text-3xl text-muted-foreground" data-testid="text-hero-subtitle">
+            are getting married
+          </p>
+          <div className="space-y-2 text-lg">
+            <p data-testid="text-hero-date">October 1, 2026</p>
+            <p data-testid="text-hero-location">Akyaka, Turkiye</p>
+          </div>
+        </div>
+      </div>
 
       <InfoSection
         title="Join Us in Paradise"
         description="We're thrilled to invite you to celebrate our wedding in the beautiful coastal town of Akyaka, Turkiye"
       >
-        <div className="max-w-2xl mx-auto text-center space-y-4">
-          <p className="text-lg text-muted-foreground">
+        <div className="max-w-2xl mx-auto text-center space-y-6">
+          <p className="text-lg text-muted-foreground leading-relaxed">
             After years of calling Akyaka home, we can't imagine a more perfect
             place to begin our journey as a married couple. Join us for a
             weekend of celebration, where the turquoise waters of the Aegean
             meet warm Mediterranean hospitality.
           </p>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg text-muted-foreground leading-relaxed">
             From coastal adventures to an unforgettable evening under the stars,
             we're creating memories that will last a lifetime, and we want you
             there with us.

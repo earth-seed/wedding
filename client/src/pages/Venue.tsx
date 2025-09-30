@@ -4,20 +4,22 @@ import venueImage from "@assets/generated_images/NUUP_Hotel_venue_exterior_39f7f
 export default function Venue() {
   return (
     <div className="pt-20 min-h-screen">
-      <div
-        className="relative h-[60vh] bg-cover bg-center"
-        style={{ backgroundImage: `url(${venueImage})` }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/50" />
-        <div className="relative z-10 h-full flex items-end">
-          <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12 pb-12 md:pb-16">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-4">
-              NUUP Hotel
-            </h1>
-            <p className="text-xl text-white/90">
-              Our celebration venue in Akyaka
-            </p>
-          </div>
+      <div className="w-full">
+        <img
+          src={venueImage}
+          alt="NUUP Hotel venue"
+          className="w-full h-[60vh] object-cover"
+        />
+      </div>
+
+      <div className="py-16 px-6">
+        <div className="max-w-3xl mx-auto text-center space-y-4">
+          <h1 className="text-4xl md:text-5xl font-serif">
+            NUUP Hotel
+          </h1>
+          <p className="text-xl text-muted-foreground">
+            Our celebration venue in Akyaka
+          </p>
         </div>
       </div>
 

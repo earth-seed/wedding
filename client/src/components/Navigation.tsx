@@ -40,19 +40,19 @@ export default function Navigation() {
         <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
           <div className="flex items-center justify-between h-16 md:h-20">
             <Link href="/">
-              <a
-                className="font-display text-xl md:text-2xl text-foreground transition-opacity hover:opacity-70"
+              <span
+                className="font-display text-xl md:text-2xl text-foreground transition-opacity hover:opacity-70 cursor-pointer"
                 data-testid="link-home"
               >
                 Bryce & Leyla
-              </a>
+              </span>
             </Link>
 
             <div className="hidden md:flex items-center gap-8">
               {navItems.map((item) => (
                 <Link key={item.path} href={item.path}>
-                  <a
-                    className={`text-sm transition-colors ${
+                  <span
+                    className={`text-sm transition-colors cursor-pointer ${
                       location === item.path
                         ? "text-foreground"
                         : "text-muted-foreground hover:text-foreground"
@@ -60,7 +60,7 @@ export default function Navigation() {
                     data-testid={`link-${item.label.toLowerCase()}`}
                   >
                     {item.label}
-                  </a>
+                  </span>
                 </Link>
               ))}
             </div>
@@ -85,8 +85,8 @@ export default function Navigation() {
           <div className="flex flex-col items-center gap-6 p-12">
             {navItems.map((item) => (
               <Link key={item.path} href={item.path}>
-                <a
-                  className={`text-xl transition-colors ${
+                <span
+                  className={`text-xl transition-colors cursor-pointer ${
                     location === item.path
                       ? "text-foreground"
                       : "text-muted-foreground hover:text-foreground"
@@ -94,7 +94,7 @@ export default function Navigation() {
                   data-testid={`link-mobile-${item.label.toLowerCase()}`}
                 >
                   {item.label}
-                </a>
+                </span>
               </Link>
             ))}
           </div>
