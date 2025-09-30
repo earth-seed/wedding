@@ -1,26 +1,13 @@
 import InfoSection from "@/components/InfoSection";
-import florals1 from "@assets/stock_images/watercolor_mediterra_5b633f66.jpg";
-import botanicals from "@assets/stock_images/delicate_botanical_l_dd3c246c.jpg";
 
 export default function Registry() {
   return (
     <div className="pt-20 min-h-screen">
-      <div className="relative">
-        <img 
-          src={florals1} 
-          alt="" 
-          className="absolute top-20 left-0 w-40 md:w-64 opacity-25 pointer-events-none"
-        />
-        <img 
-          src={botanicals} 
-          alt="" 
-          className="absolute top-40 right-0 w-32 md:w-48 opacity-25 pointer-events-none transform scale-x-[-1]"
-        />
-        <InfoSection
-          title="Registry & Gifts"
-          description="Your presence is the greatest gift, but if you wish to contribute..."
-        >
-          <div className="max-w-3xl mx-auto space-y-16 relative z-10">
+      <InfoSection
+        title="Registry & Gifts"
+        description="Your presence is the greatest gift, but if you wish to contribute..."
+      >
+        <div className="max-w-3xl mx-auto space-y-16">
             <div className="border-l-2 border-primary/30 pl-8 py-6">
             <h3 className="text-2xl font-serif mb-4">Our First Priority</h3>
             <p className="text-lg text-foreground mb-4 leading-relaxed">
@@ -67,8 +54,7 @@ export default function Registry() {
             </p>
             </div>
           </div>
-        </InfoSection>
-      </div>
+      </InfoSection>
     </div>
   );
 }

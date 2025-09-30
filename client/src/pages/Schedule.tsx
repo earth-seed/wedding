@@ -1,27 +1,14 @@
 import InfoSection from "@/components/InfoSection";
 import EventCard from "@/components/EventCard";
-import oliveBranch from "@assets/stock_images/watercolor_olive_bra_90317931.jpg";
-import florals from "@assets/stock_images/watercolor_mediterra_a8f97489.jpg";
 
 export default function Schedule() {
   return (
     <div className="pt-20 min-h-screen">
-      <div className="relative">
-        <img 
-          src={oliveBranch} 
-          alt="" 
-          className="absolute top-0 right-0 w-32 md:w-56 opacity-20 pointer-events-none"
-        />
-        <img 
-          src={florals} 
-          alt="" 
-          className="absolute bottom-20 left-0 w-40 md:w-64 opacity-20 pointer-events-none"
-        />
-        <InfoSection
-          title="Wedding Schedule"
-          description="Two days of celebration in beautiful Akyaka"
-        >
-          <div className="max-w-3xl mx-auto space-y-20 relative z-10">
+      <InfoSection
+        title="Wedding Schedule"
+        description="Two days of celebration in beautiful Akyaka"
+      >
+        <div className="max-w-3xl mx-auto space-y-20">
           <div>
             <div className="text-center mb-12">
               <h3 className="text-3xl md:text-4xl font-serif mb-2">
@@ -79,8 +66,7 @@ export default function Schedule() {
             </div>
           </div>
         </div>
-        </InfoSection>
-      </div>
+      </InfoSection>
     </div>
   );
 }

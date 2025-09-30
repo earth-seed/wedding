@@ -6,9 +6,6 @@ import ceremonyImage from "@assets/generated_images/Wedding_ceremony_setup_Medit
 import oliveImage from "@assets/generated_images/Olive_grove_landscape_Turkey_69daa26c.png";
 import dinnerImage from "@assets/generated_images/Wedding_dinner_reception_setup_0cdafc3e.png";
 import boatImage from "@assets/generated_images/Coastal_boat_ride_activity_2d04e6b9.png";
-import oliveBranch1 from "@assets/stock_images/watercolor_olive_bra_3ed55f45.jpg";
-import oliveBranch2 from "@assets/stock_images/watercolor_olive_bra_2b145fc8.jpg";
-import florals from "@assets/stock_images/watercolor_mediterra_b6492684.jpg";
 
 export default function Home() {
   const galleryItems = [
@@ -44,35 +41,31 @@ export default function Home() {
 
   return (
     <div>
+      <div className="min-h-screen flex items-center justify-center py-20 px-6">
+        <div className="max-w-2xl w-full text-center space-y-12">
+          <div className="space-y-8">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif uppercase tracking-wider" data-testid="text-hero-title">
+              Bryce & Leyla
+            </h1>
+            
+            <div className="w-24 h-px bg-foreground/30 mx-auto"></div>
+            
+            <p className="text-lg md:text-xl font-serif text-muted-foreground tracking-widest" data-testid="text-hero-subtitle">
+              ARE GETTING MARRIED
+            </p>
+            
+            <div className="space-y-3 text-base md:text-lg font-sans">
+              <p className="tracking-wide" data-testid="text-hero-date">October 1, 2026</p>
+              <p className="tracking-wide" data-testid="text-hero-location">Akyaka, Turkiye</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <HeroSection
         backgroundImage={heroImage}
         alt="Akyaka coastline at sunset"
       />
-
-      <div className="relative py-20 px-6">
-        <img 
-          src={oliveBranch1} 
-          alt="" 
-          className="absolute top-0 left-0 w-32 md:w-48 opacity-30 pointer-events-none"
-        />
-        <img 
-          src={oliveBranch2} 
-          alt="" 
-          className="absolute top-0 right-0 w-32 md:w-48 opacity-30 pointer-events-none transform scale-x-[-1]"
-        />
-        <div className="max-w-3xl mx-auto text-center space-y-6 relative z-10">
-          <h1 className="text-5xl md:text-7xl font-serif" data-testid="text-hero-title">
-            Bryce & Leyla
-          </h1>
-          <p className="text-2xl md:text-3xl text-muted-foreground" data-testid="text-hero-subtitle">
-            are getting married
-          </p>
-          <div className="space-y-2 text-lg">
-            <p data-testid="text-hero-date">October 1, 2026</p>
-            <p data-testid="text-hero-location">Akyaka, Turkiye</p>
-          </div>
-        </div>
-      </div>
 
       <InfoSection
         title="Join Us in Paradise"
