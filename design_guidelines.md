@@ -20,14 +20,13 @@
 - Maintain same accent colors with adjusted opacity for dark backgrounds
 
 ## Typography
-- **Headings**: 'Lora' (serif) - Soft, elegant, organic
+- **All Text**: 'Playfair Display' (serif) - Elegant, formal, wedding invitation aesthetic
   - H1: 3.5rem/4rem (mobile: 2.5rem/3rem), font-weight: 500
   - H2: 2.5rem/3rem (mobile: 2rem/2.5rem), font-weight: 500
   - H3: 1.75rem/2.25rem (mobile: 1.5rem/2rem), font-weight: 500
-- **Body**: 'Source Serif 4' (serif) - Warm, readable, natural
-  - Base: 1.125rem/1.875rem, font-weight: 400
+  - Body: Base 1.125rem/1.875rem, font-weight: 400
   - Small: 0.9375rem/1.5rem
-- **Special Elements**: 'Lora' for couple names and dates - elegant and flowing
+- **Special Elements**: 'Playfair Display' for couple names and dates with increased letter spacing for elegance
 
 ## Layout System
 **Spacing Primitives**: Use Tailwind units of 4, 6, 8, 12, 16, 20, 24 (p-4, m-6, gap-8, py-12, px-16, etc.)

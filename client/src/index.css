@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -78,7 +78,7 @@
   --chart-4: 15 70% 60%;
   --chart-5: 200 60% 55%;
 
-  --font-sans: 'Lato', sans-serif;
+  --font-sans: 'Playfair Display', Georgia, serif;
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-display: 'Playfair Display', Georgia, serif;
   --font-mono: Menlo, monospace;
@@ -241,14 +241,15 @@
   }
 
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+    @apply font-display antialiased bg-background text-foreground;
     line-height: 1.875;
     letter-spacing: 0.01em;
+    font-weight: 400;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif;
-    font-weight: 400;
+    @apply font-display;
+    font-weight: 500;
     letter-spacing: 0.05em;
   }
 }
