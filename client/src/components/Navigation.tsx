@@ -9,6 +9,7 @@ const navItems = [
   { path: "/venue", label: "Venue" },
   { path: "/schedule", label: "Schedule" },
   { path: "/registry", label: "Registry" },
+  { path: "/rsvp", label: "RSVP" },
 ];
 
 export default function Navigation() {

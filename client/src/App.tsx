@@ -9,6 +9,7 @@ import Travel from "@/pages/Travel";
 import Venue from "@/pages/Venue";
 import Schedule from "@/pages/Schedule";
 import Registry from "@/pages/Registry";
+import Rsvp from "@/pages/Rsvp";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -19,6 +20,7 @@ function Router() {
       <Route path="/venue" component={Venue} />
       <Route path="/schedule" component={Schedule} />
       <Route path="/registry" component={Registry} />
+      <Route path="/rsvp" component={Rsvp} />
       <Route component={NotFound} />
     </Switch>
   );
