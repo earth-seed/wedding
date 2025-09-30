@@ -6,12 +6,12 @@
 ## Color Palette
 
 ### Light Mode
-- **Primary**: 25 85% 55% (Warm Terracotta) - Mediterranean clay and sunset tones
-- **Secondary**: 190 75% 45% (Aegean Turquoise) - Coastal waters
-- **Accent**: 35 65% 50% (Golden Olive) - Olive groves and warm earth
-- **Neutral Base**: 30 15% 96% (Warm White) - Sun-bleached stone
-- **Text Primary**: 25 25% 20% (Warm Charcoal)
-- **Text Secondary**: 25 15% 45% (Muted Brown)
+- **Primary**: 25 45% 45% (Warm Clay) - Natural terracotta, muted and earthy
+- **Secondary**: 190 30% 50% (Soft Sage) - Muted coastal greens
+- **Accent**: 35 30% 55% (Olive Gold) - Gentle olive and earth tones
+- **Neutral Base**: 35 20% 95% (Natural Linen) - Soft, warm white
+- **Text Primary**: 25 30% 25% (Earth Brown)
+- **Text Secondary**: 25 15% 50% (Soft Brown)
 
 ### Dark Mode
 - **Background**: 25 20% 12% (Deep Clay)
@@ -20,14 +20,14 @@
 - Maintain same accent colors with adjusted opacity for dark backgrounds
 
 ## Typography
-- **Headings**: 'Playfair Display' (serif) - Elegant, romantic, classic
-  - H1: 3.5rem/4rem (mobile: 2.5rem/3rem), font-weight: 600
-  - H2: 2.5rem/3rem (mobile: 2rem/2.5rem), font-weight: 600
+- **Headings**: 'Lora' (serif) - Soft, elegant, organic
+  - H1: 3.5rem/4rem (mobile: 2.5rem/3rem), font-weight: 500
+  - H2: 2.5rem/3rem (mobile: 2rem/2.5rem), font-weight: 500
   - H3: 1.75rem/2.25rem (mobile: 1.5rem/2rem), font-weight: 500
-- **Body**: 'Inter' (sans-serif) - Clean, highly readable
-  - Base: 1.125rem/1.75rem, font-weight: 400
-  - Small: 0.875rem/1.25rem
-- **Special Elements**: 'Cormorant Garamond' for couple names and dates - extra elegant touch
+- **Body**: 'Source Serif 4' (serif) - Warm, readable, natural
+  - Base: 1.125rem/1.875rem, font-weight: 400
+  - Small: 0.9375rem/1.5rem
+- **Special Elements**: 'Lora' for couple names and dates - elegant and flowing
 
 ## Layout System
 **Spacing Primitives**: Use Tailwind units of 4, 6, 8, 12, 16, 20, 24 (p-4, m-6, gap-8, py-12, px-16, etc.)
@@ -39,9 +39,9 @@
 ## Component Library
 
 ### Navigation
-- Sticky top navigation with backdrop blur (backdrop-blur-md bg-white/90 dark:bg-gray-900/90)
-- Horizontal tabs for desktop: Home | Travel | Venue | Schedule | Registry
-- Hamburger menu for mobile with full-screen overlay
+- Minimal navigation with subtle presence
+- Simple text links without heavy backgrounds
+- Elegant separator lines using natural tones
 - Smooth scroll behavior between sections
 
 ### Home Page Structure
@@ -76,11 +76,11 @@
 - Image gallery carousel
 
 ### Schedule Page
-- Vertical timeline layout with alternating left/right cards
-- Day headers with large dates
-- Event cards with: time slot, event name, description, dress code
-- Icons for each event type (boat, dinner, music, dance)
-- Editable time placeholders
+- Vertical timeline with minimal ornamentation
+- Day headers with elegant typography
+- Simple event listings with flowing text
+- Minimal use of icons - let typography lead
+- Clean separation with subtle lines or spacing
 
 ### Registry/Donations Page
 - Priority callout box for charity donation (Palestinian support)

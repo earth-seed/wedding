@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap');
 
 /* LIGHT MODE */
 :root {
@@ -16,55 +16,55 @@
   --elevate-1: rgba(0,0,0, .03);
   --elevate-2: rgba(0,0,0, .08);
 
-  --background: 30 5% 96%;
+  --background: 35 20% 95%;
 
-  --foreground: 25 25% 20%;
+  --foreground: 25 30% 25%;
 
-  --border: 30 8% 88%;
+  --border: 35 15% 85%;
 
-  --card: 30 6% 94%;
+  --card: 35 18% 92%;
 
-  --card-foreground: 25 25% 20%;
+  --card-foreground: 25 30% 25%;
 
-  --card-border: 30 8% 90%;
+  --card-border: 35 15% 88%;
 
-  --sidebar: 30 6% 92%;
+  --sidebar: 35 18% 90%;
 
-  --sidebar-foreground: 25 25% 20%;
+  --sidebar-foreground: 25 30% 25%;
 
-  --sidebar-border: 30 8% 86%;
+  --sidebar-border: 35 15% 84%;
 
-  --sidebar-primary: 25 85% 55%;
+  --sidebar-primary: 25 45% 45%;
 
-  --sidebar-primary-foreground: 30 10% 98%;
+  --sidebar-primary-foreground: 35 10% 98%;
 
-  --sidebar-accent: 30 12% 88%;
+  --sidebar-accent: 35 18% 88%;
 
-  --sidebar-accent-foreground: 25 30% 25%;
+  --sidebar-accent-foreground: 25 35% 30%;
 
-  --sidebar-ring: 25 85% 55%;
+  --sidebar-ring: 25 45% 45%;
 
-  --popover: 30 8% 90%;
+  --popover: 35 18% 90%;
 
-  --popover-foreground: 25 25% 20%;
+  --popover-foreground: 25 30% 25%;
 
-  --popover-border: 30 10% 84%;
+  --popover-border: 35 15% 82%;
 
-  --primary: 25 85% 55%;
+  --primary: 25 45% 45%;
 
-  --primary-foreground: 30 10% 98%;
+  --primary-foreground: 35 10% 98%;
 
-  --secondary: 30 10% 86%;
+  --secondary: 35 15% 85%;
 
-  --secondary-foreground: 25 30% 25%;
+  --secondary-foreground: 25 35% 30%;
 
-  --muted: 30 12% 88%;
+  --muted: 35 18% 88%;
 
-  --muted-foreground: 25 15% 45%;
+  --muted-foreground: 25 15% 50%;
 
-  --accent: 35 20% 86%;
+  --accent: 35 30% 75%;
 
-  --accent-foreground: 35 40% 30%;
+  --accent-foreground: 35 40% 35%;
 
   --destructive: 0 72% 51%;
 
@@ -78,9 +78,9 @@
   --chart-4: 15 70% 60%;
   --chart-5: 200 60% 55%;
 
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-serif: 'Playfair Display', Georgia, serif;
-  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Source Serif 4', Georgia, serif;
+  --font-serif: 'Lora', Georgia, serif;
+  --font-display: 'Lora', Georgia, serif;
   --font-mono: Menlo, monospace;
   --radius: .5rem;
   --shadow-2xs: 0px 1px 2px 0px hsl(25 20% 15% / 0.05);
@@ -242,10 +242,12 @@
 
   body {
     @apply font-sans antialiased bg-background text-foreground;
+    line-height: 1.875;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif;
+    font-weight: 500;
   }
 }
 

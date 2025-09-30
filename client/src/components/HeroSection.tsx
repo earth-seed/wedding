@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/button";
-import { Calendar, MapPin } from "lucide-react";
 
 interface HeroSectionProps {
   backgroundImage: string;
@@ -42,32 +40,23 @@ export default function HeroSection({
           {subtitle}
         </p>
         
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6 mb-10 animate-in fade-in duration-1000 delay-300">
-          <div className="flex items-center gap-2 text-white/95">
-            <Calendar className="h-5 w-5" />
-            <span className="text-lg font-medium" data-testid="text-hero-date">
-              {date}
-            </span>
-          </div>
-          <div className="hidden sm:block w-px h-6 bg-white/40" />
-          <div className="flex items-center gap-2 text-white/95">
-            <MapPin className="h-5 w-5" />
-            <span className="text-lg font-medium" data-testid="text-hero-location">
-              {location}
-            </span>
-          </div>
+        <div className="flex flex-col items-center justify-center gap-2 mb-10 animate-in fade-in duration-1000 delay-300">
+          <p className="text-lg text-white/95" data-testid="text-hero-date">
+            {date}
+          </p>
+          <p className="text-lg text-white/95" data-testid="text-hero-location">
+            {location}
+          </p>
         </div>
 
         {ctaText && (
-          <Button
-            variant="outline"
-            size="lg"
+          <button
             onClick={ctaAction}
-            className="bg-background/10 backdrop-blur-md border-white/30 text-white hover:bg-background/20 animate-in fade-in duration-1000 delay-500"
+            className="px-8 py-3 border border-white/40 text-white backdrop-blur-sm bg-background/5 hover:bg-background/15 transition-all duration-300 animate-in fade-in duration-1000 delay-500"
             data-testid="button-hero-cta"
           >
             {ctaText}
-          </Button>
+          </button>
         )}
       </div>
     </div>
