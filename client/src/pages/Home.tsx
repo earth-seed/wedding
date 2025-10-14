@@ -1,15 +1,11 @@
 import InfoSection from "@/components/InfoSection";
-import MediaGallery from "@/components/MediaGallery";
 import photo1 from "@assets/10-14-25-Engagement-466_1760454989749.jpg";
 import photo2 from "@assets/untitled-384_1760454997301.jpg";
-import photo3 from "@assets/10-14-25-Engagement-374_1760455012794.jpg";
 
 export default function Home() {
-  const galleryItems: any[] = [];
-
   return (
     <div>
-      <div className="min-h-screen flex items-center justify-center py-20 px-6">
+      <div className="min-h-screen flex items-center justify-center pt-20 pb-8 px-6">
         <div className="max-w-2xl w-full text-center space-y-12">
           <div className="space-y-8">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif uppercase tracking-wider" data-testid="text-hero-title">
@@ -66,19 +62,6 @@ export default function Home() {
           data-testid="img-coastline"
         />
       </div>
-
-      <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-12 pb-20">
-        <img
-          src={photo3}
-          alt="Leyla and Bryce by the dock"
-          className="w-full h-auto rounded-md object-cover"
-          data-testid="img-couple-dock"
-        />
-      </div>
-
-      <InfoSection title="Gallery">
-        <MediaGallery items={galleryItems} />
-      </InfoSection>
     </div>
   );
 }
