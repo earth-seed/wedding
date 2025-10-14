@@ -45,7 +45,7 @@ export default function Navigation() {
                 className="font-display text-xl md:text-2xl text-foreground transition-opacity hover:opacity-70 cursor-pointer"
                 data-testid="link-home"
               >
-                Bryce & Leyla
+                Leyla & Bryce
               </span>
             </Link>
 
