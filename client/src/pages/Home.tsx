@@ -1,9 +1,12 @@
 import InfoSection from "@/components/InfoSection";
+import MediaGallery from "@/components/MediaGallery";
 import photo1 from "@assets/10-14-25-Engagement-466_1760454989749.jpg";
 import photo2 from "@assets/untitled-384_1760454997301.jpg";
 import photo3 from "@assets/10-14-25-Engagement-374_1760455012794.jpg";
 
 export default function Home() {
+  const galleryItems: any[] = [];
+
   return (
     <div>
       <div className="min-h-screen flex items-center justify-center py-20 px-6">
@@ -27,32 +30,13 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12 pb-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-          <div className="md:col-span-1">
-            <img
-              src={photo1}
-              alt="Leyla and Bryce at sunset"
-              className="w-full h-auto rounded-md object-cover"
-              data-testid="img-couple-sunset"
-            />
-          </div>
-          
-          <div className="md:col-span-1 flex flex-col gap-6 md:gap-8">
-            <img
-              src={photo2}
-              alt="Akyaka coastline"
-              className="w-full h-auto rounded-md object-cover"
-              data-testid="img-coastline"
-            />
-            <img
-              src={photo3}
-              alt="Leyla and Bryce by the dock"
-              className="w-full h-auto rounded-md object-cover"
-              data-testid="img-couple-dock"
-            />
-          </div>
-        </div>
+      <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-12 pb-16">
+        <img
+          src={photo1}
+          alt="Leyla and Bryce at sunset"
+          className="w-full h-auto rounded-md object-cover"
+          data-testid="img-couple-sunset"
+        />
       </div>
 
       <InfoSection
@@ -72,6 +56,28 @@ export default function Home() {
             there with us.
           </p>
         </div>
+      </InfoSection>
+
+      <div className="max-w-5xl mx-auto px-6 md:px-8 lg:px-12 py-16">
+        <img
+          src={photo2}
+          alt="Akyaka coastline"
+          className="w-full h-auto rounded-md object-cover"
+          data-testid="img-coastline"
+        />
+      </div>
+
+      <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-12 pb-20">
+        <img
+          src={photo3}
+          alt="Leyla and Bryce by the dock"
+          className="w-full h-auto rounded-md object-cover"
+          data-testid="img-couple-dock"
+        />
+      </div>
+
+      <InfoSection title="Gallery">
+        <MediaGallery items={galleryItems} />
       </InfoSection>
     </div>
   );
