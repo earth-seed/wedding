@@ -10,9 +10,9 @@ export default function InfoSection({
   children,
 }: InfoSectionProps) {
   return (
-    <section className="py-16 md:py-20 lg:py-24">
+    <section className="py-8 md:py-12">
       <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
-        <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
+        <div className="max-w-3xl mx-auto text-center mb-8 md:mb-10">
           <h2
             className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-4"
             data-testid={`text-section-title-${title.toLowerCase().replace(/\s+/g, '-')}`}

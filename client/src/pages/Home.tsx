@@ -5,7 +5,7 @@ import photo2 from "@assets/untitled-384_1760454997301.jpg";
 export default function Home() {
   return (
     <div>
-      <div className="min-h-screen flex items-center justify-center pt-20 pb-8 px-6">
+      <div className="min-h-screen flex items-center justify-center pt-20 pb-4 px-6">
         <div className="max-w-2xl w-full text-center space-y-12">
           <div className="space-y-8">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif uppercase tracking-wider" data-testid="text-hero-title">
@@ -26,7 +26,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-12 pb-16">
+      <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-12 pb-8">
         <img
           src={photo1}
           alt="Leyla and Bryce at sunset"
@@ -54,7 +54,7 @@ export default function Home() {
         </div>
       </InfoSection>
 
-      <div className="max-w-5xl mx-auto px-6 md:px-8 lg:px-12 py-16">
+      <div className="max-w-5xl mx-auto px-6 md:px-8 lg:px-12 pb-12">
         <img
           src={photo2}
           alt="Akyaka coastline"
