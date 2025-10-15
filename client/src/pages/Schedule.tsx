@@ -31,7 +31,7 @@ export default function Schedule() {
                   </div>
                   <h4 className="font-serif text-lg mb-2">Rehearsal Dinner</h4>
                   <p className="text-muted-foreground leading-relaxed">
-                    At favorite local restaurant: Sepia.
+                    Location TBD.
                   </p>
                 </div>
               </div>
@@ -44,7 +44,7 @@ export default function Schedule() {
               <div className="space-y-6">
                 <div>
                   <div className="text-sm font-display tracking-wider text-primary/80 uppercase mb-2">
-                    6:00 PM
+                    5:00 PM
                   </div>
                   <h4 className="font-serif text-lg mb-2">Ceremony</h4>
                   <p className="text-muted-foreground leading-relaxed">
@@ -54,7 +54,7 @@ export default function Schedule() {
                 
                 <div>
                   <div className="text-sm font-display tracking-wider text-primary/80 uppercase mb-2">
-                    7:00 PM
+                    6:00 PM
                   </div>
                   <h4 className="font-serif text-lg mb-2">Live Performance</h4>
                   <p className="text-muted-foreground leading-relaxed">
@@ -64,7 +64,7 @@ export default function Schedule() {
                 
                 <div>
                   <div className="text-sm font-display tracking-wider text-primary/80 uppercase mb-2">
-                    8:00 PM
+                    7:00 PM
                   </div>
                   <h4 className="font-serif text-lg mb-2">Wedding Dinner</h4>
                   <p className="text-muted-foreground leading-relaxed">
@@ -74,7 +74,7 @@ export default function Schedule() {
                 
                 <div>
                   <div className="text-sm font-display tracking-wider text-primary/80 uppercase mb-2">
-                    9:30 PM
+                    8:30 PM
                   </div>
                   <h4 className="font-serif text-lg mb-2">DJ Set</h4>
                   <p className="text-muted-foreground leading-relaxed">
