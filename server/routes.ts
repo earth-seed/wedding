@@ -2,6 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertRsvpSchema } from "@shared/schema";
+import { sendRsvpNotification } from "./email";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // RSVP routes
@@ -9,6 +10,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const validatedData = insertRsvpSchema.parse(req.body);
       const rsvp = await storage.createRsvp(validatedData);
+      
+      // Send email notification
+      await sendRsvpNotification(rsvp);
+      
       res.json(rsvp);
     } catch (error) {
       res.status(400).json({ error: "Invalid RSVP data" });
