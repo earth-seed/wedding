@@ -1,6 +1,6 @@
 import { type User, type InsertUser, type Rsvp, type InsertRsvp } from "@shared/schema";
 import { randomUUID } from "crypto";
-import { readFileSync, writeFileSync, existsSync } from "fs";
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs";
 import { join } from "path";
 
 // modify the interface with any CRUD methods
@@ -28,7 +28,7 @@ export class FileStorage implements IStorage {
     
     // Ensure data directory exists
     if (!existsSync(this.dataDir)) {
-      require("fs").mkdirSync(this.dataDir, { recursive: true });
+      mkdirSync(this.dataDir, { recursive: true });
     }
     
     // Load existing RSVPs from file
