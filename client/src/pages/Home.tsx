@@ -5,34 +5,32 @@ import photo2 from "@assets/untitled-384_1760454997301.jpg";
 export default function Home() {
   return (
     <div>
-      <div className="min-h-screen flex items-center justify-center pt-20 pb-4 px-6">
-        <div className="max-w-2xl w-full text-center space-y-12">
+      <div className="relative min-h-screen flex items-center justify-center">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${photo1})` }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-2xl w-full text-center space-y-12 px-6 py-20">
           <div className="space-y-8">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif uppercase tracking-wider" data-testid="text-hero-title">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif uppercase tracking-wider text-white drop-shadow-lg" data-testid="text-hero-title">
               Leyla & Bryce
             </h1>
             
-            <div className="w-24 h-px bg-foreground/30 mx-auto"></div>
+            <div className="w-24 h-px bg-white/60 mx-auto"></div>
             
-            <p className="text-lg md:text-xl font-serif text-muted-foreground tracking-widest" data-testid="text-hero-subtitle">
+            <p className="text-lg md:text-xl font-serif text-white/90 tracking-widest drop-shadow-md" data-testid="text-hero-subtitle">
               ARE GETTING MARRIED
             </p>
             
-            <div className="space-y-3 text-base md:text-lg font-sans">
+            <div className="space-y-3 text-base md:text-lg font-sans text-white/95 drop-shadow-md">
               <p className="tracking-wide" data-testid="text-hero-date">October 1, 2026</p>
               <p className="tracking-wide" data-testid="text-hero-location">Akyaka, Turkiye</p>
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-12 pb-8">
-        <img
-          src={photo1}
-          alt="Leyla and Bryce at sunset"
-          className="w-full h-auto rounded-md object-cover"
-          data-testid="img-couple-sunset"
-        />
       </div>
 
       <InfoSection
