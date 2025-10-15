@@ -121,7 +121,7 @@ export default function Home() {
 
       {/* About Akyaka Section */}
       <section 
-        className="py-16 md:py-20 bg-cover bg-center bg-fixed relative"
+        className="py-16 md:py-20 bg-cover bg-center relative"
         style={{ backgroundImage: `url(${akyakaBackground})` }}
       >
         <div className="absolute inset-0 bg-black/40"></div>
