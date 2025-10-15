@@ -2,7 +2,7 @@ import InfoSection from "@/components/InfoSection";
 import MediaGallery from "@/components/MediaGallery";
 import photo1 from "@assets/10-14-25-Engagement-466_1760454989749.jpg";
 import photo2 from "@assets/10-14-25-Engagement-374_1760455012794.jpg";
-import akyakaBackground from "@assets/untitled-384_1760454997301.jpg";
+import akyakaBackground from "@assets/Turkiye-Fall-2024-494.jpg";
 
 export default function Home() {
   return (
@@ -90,25 +90,17 @@ export default function Home() {
             
             {/* Wedding Details */}
             <div className="space-y-8">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-light tracking-[0.05em] text-foreground leading-tight" data-testid="text-details-title">
-                The Details
-              </h2>
-              
+    
               <div className="space-y-6 text-base md:text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  Join us for a weekend of celebration in the beautiful coastal town of Akyaka, Turkiye. 
-                  After years of calling this place home, we can't imagine a more perfect setting to begin 
-                  our journey as a married couple.
+                  We would love for you to join us as we celebrate our wedding in the beautiful coastal town of Akyaka, Turkiye. 
                 </p>
                 <p>
-                  From coastal adventures to an unforgettable evening under the stars, we're creating 
-                  memories that will last a lifetime. The turquoise waters of the Aegean meet warm 
-                  Mediterranean hospitality in this hidden gem.
+                  After moving here in 2024, we have fallen more in love with eachother and the dramatic seasons, 
+                  healing rivers, stunning Mediterranean coastline, and fragrant pine forests of the region. 
                 </p>
                 <p>
-                  We've planned a weekend filled with love, laughter, and the natural beauty that makes 
-                  Akyaka so special to us. Come celebrate with us as we say "I do" surrounded by the 
-                  people we love most.
+                  We are excited to bring our loved ones together in this special place and look forward to reconnecting and celebrating with each of you.
                 </p>
               </div>
               
@@ -155,13 +147,6 @@ export default function Home() {
                 Akyaka is a hidden gem that has captured our hearts. This charming 
                 coastal town offers the perfect blend of natural beauty and authentic 
                 Turkish hospitality.
-              </p>
-              
-              <p className="text-base sm:text-lg text-white/90 leading-relaxed text-center">
-                From the crystal-clear waters of the Azmak River to the traditional 
-                Ottoman architecture, Akyaka provides an idyllic backdrop for our 
-                special day. Join us in this Mediterranean paradise where every 
-                sunset paints the sky in golden hues.
               </p>
               
               <div className="pt-4 flex justify-center">
