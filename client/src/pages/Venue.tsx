@@ -1,77 +1,118 @@
 import InfoSection from "@/components/InfoSection";
-import venueImage from "@assets/generated_images/NUUP_Hotel_venue_exterior_39f7f791.png";
+import venue1 from "@assets/Screenshot 2025-10-15 at 12.26.43.png";
+import venue2 from "@assets/Screenshot 2025-10-15 at 12.27.00.png";
+import venue3 from "@assets/Screenshot 2025-10-15 at 12.27.16.png";
+import venue4 from "@assets/Screenshot 2025-10-15 at 12.28.39.png";
+import venue5 from "@assets/Screenshot 2025-10-15 at 12.28.51.png";
+import venue6 from "@assets/Screenshot 2025-10-15 at 12.30.14.png";
+import venue7 from "@assets/Screenshot 2025-10-15 at 12.30.43.png";
+import venue8 from "@assets/Screenshot 2025-10-15 at 12.38.08.png";
 
 export default function Venue() {
   return (
     <div className="pt-20 min-h-screen">
-      <div className="w-full">
+      {/* Hero Section */}
+      <section className="relative h-[40vh] overflow-hidden">
         <img
-          src={venueImage}
-          alt="NUUP Hotel venue"
-          className="w-full h-[60vh] object-cover"
+          src={venue1}
+          alt="NUUP Hotel exterior"
+          className="w-full h-full object-cover"
         />
-      </div>
-
-      <div className="py-16 px-6">
-        <div className="max-w-3xl mx-auto text-center space-y-4">
-          <h1 className="text-4xl md:text-5xl font-serif">
-            NUUP Hotel
-          </h1>
-          <p className="text-xl text-muted-foreground">
-            Our celebration venue in Akyaka
-          </p>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+        <div className="absolute inset-0 flex items-end">
+          <div className="w-full text-center pb-16 px-6">
+          </div>
         </div>
-      </div>
+      </section>
 
-      <InfoSection title="The Venue">
-        <div className="max-w-3xl mx-auto space-y-12">
-          <div className="border-l-2 border-primary/30 pl-8 py-6">
-            <h3 className="text-2xl font-serif mb-4">
-              About NUUP Hotel
-            </h3>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              NUUP Hotel embodies the essence of Mediterranean elegance,
-              blending contemporary design with natural materials and
-              traditional Turkish hospitality. Nestled among olive groves
-              and overlooking the Aegean, it's the perfect setting for our
-              special day.
-            </p>
-            <div>
-              <h4 className="font-serif text-lg mb-3">What to Expect</h4>
-              <ul className="space-y-2 text-muted-foreground leading-relaxed">
-                <li>Stunning views of the surrounding mountains and sea</li>
-                <li>Beautiful outdoor ceremony and reception spaces</li>
-                <li>Contemporary Mediterranean architecture</li>
-                <li>Lush gardens and intimate courtyards</li>
-              </ul>
+      <InfoSection title="The Venue" className="bg-gradient-to-b from-background to-muted/20">
+        <div className="max-w-6xl mx-auto space-y-16">
+          {/* About Section */}
+          <div className="animate-fade-in">
+            <div className="grid md:grid-cols-3 gap-12 items-center">
+              <div className="md:col-span-2 space-y-6">
+                <h3 className="text-3xl md:text-4xl font-display font-light text-foreground">
+                  About NUUP Hotel
+                </h3>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  NUUP Hotel is a unique boutique hotel nestled in a small village about 25 minutes from Akyaka. 
+                  This charming property offers an authentic farm-to-table experience with its own working farm, 
+                  fresh herb garden, and pottery studio. It's the perfect blend of rustic charm and modern comfort 
+                  for our special day.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  With only 28 rooms, NUUP provides an intimate and exclusive setting for our wedding celebration. 
+                  The hotel's commitment to sustainability and local craftsmanship makes it a truly special place 
+                  to gather with family and friends. Guests staying the night of the ceremony will enjoy a 
+                  complimentary breakfast the following morning, and we'd love to help you book your stay.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  If you're interested in staying at NUUP for the wedding night, please reach out to us directly 
+                  for booking details and special rates. We can help coordinate your stay at this beautiful venue.
+                </p>
+              </div>
+              <div className="md:col-span-1 relative">
+                <img
+                  src={venue2}
+                  alt="NUUP Hotel grounds"
+                  className="w-full h-[28rem] object-cover rounded-lg shadow-xl"
+                />
+              </div>
             </div>
           </div>
 
-          <div className="border-l-2 border-primary/30 pl-8 py-6">
-            <h3 className="text-2xl font-serif mb-4">
-              Location & Contact
+
+          {/* Photo Gallery */}
+          <div className="animate-fade-in">
+            <h3 className="text-3xl md:text-4xl font-display font-light text-center mb-12 text-foreground">
+              Gallery
             </h3>
-            <div className="space-y-4">
-              <div>
-                <p className="font-serif text-lg mb-1">Address</p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Akyaka, Muğla, Turkiye
-                </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="relative overflow-hidden rounded-lg shadow-lg">
+                <img
+                  src={venue3}
+                  alt="NUUP Hotel interior"
+                  className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                />
               </div>
-              <div>
-                <p className="font-serif text-lg mb-1">Phone</p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Contact details will be provided
-                </p>
+              <div className="relative overflow-hidden rounded-lg shadow-lg">
+                <img
+                  src={venue4}
+                  alt="NUUP Hotel grounds"
+                  className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                />
               </div>
-              <div>
-                <p className="font-serif text-lg mb-1">Email</p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Venue inquiries available upon request
-                </p>
+              <div className="relative overflow-hidden rounded-lg shadow-lg">
+                <img
+                  src={venue5}
+                  alt="NUUP Hotel facilities"
+                  className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="relative overflow-hidden rounded-lg shadow-lg">
+                <img
+                  src={venue6}
+                  alt="NUUP Hotel garden"
+                  className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="relative overflow-hidden rounded-lg shadow-lg">
+                <img
+                  src={venue7}
+                  alt="NUUP Hotel view"
+                  className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="relative overflow-hidden rounded-lg shadow-lg">
+                <img
+                  src={venue8}
+                  alt="NUUP Hotel additional view"
+                  className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                />
               </div>
             </div>
           </div>
+
         </div>
       </InfoSection>
     </div>

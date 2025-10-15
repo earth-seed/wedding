@@ -1,7 +1,7 @@
 interface EventCardProps {
   time: string;
   title: string;
-  description: string;
+  description?: string;
 }
 
 export default function EventCard({
@@ -10,20 +10,18 @@ export default function EventCard({
   description,
 }: EventCardProps) {
   return (
-    <div className="border-l-2 border-primary/30 pl-6 py-4">
-      <div
-        className="text-sm text-muted-foreground mb-2"
-        data-testid={`text-event-time-${title.toLowerCase().replace(/\s+/g, '-')}`}
-      >
-        {time}
+    <div className="group relative bg-gradient-to-br from-primary/5 to-accent/5 border border-primary/20 rounded-2xl p-6 hover:from-primary/10 hover:to-accent/10 transition-all duration-300 hover:shadow-lg hover:scale-[1.02] transform">
+      <div className="space-y-4">
+        <div className="text-sm font-display tracking-wider text-primary/80 uppercase bg-primary/10 px-3 py-1 rounded-full inline-block">
+          {time}
+        </div>
+        <h3 className="text-2xl md:text-3xl font-display font-light text-foreground group-hover:text-primary transition-colors duration-300">
+          {title}
+        </h3>
+        {description && (
+          <p className="text-muted-foreground leading-relaxed text-lg">{description}</p>
+        )}
       </div>
-      <h3
-        className="text-2xl font-serif mb-3"
-        data-testid={`text-event-title-${title.toLowerCase().replace(/\s+/g, '-')}`}
-      >
-        {title}
-      </h3>
-      <p className="text-muted-foreground leading-relaxed">{description}</p>
     </div>
   );
 }

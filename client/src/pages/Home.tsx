@@ -1,67 +1,187 @@
 import InfoSection from "@/components/InfoSection";
+import MediaGallery from "@/components/MediaGallery";
 import photo1 from "@assets/10-14-25-Engagement-466_1760454989749.jpg";
-import photo2 from "@assets/untitled-384_1760454997301.jpg";
+import photo2 from "@assets/10-14-25-Engagement-374_1760455012794.jpg";
+import akyakaBackground from "@assets/untitled-384_1760454997301.jpg";
 
 export default function Home() {
   return (
     <div>
-      <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center scale-105"
-          style={{ backgroundImage: `url(${photo1})` }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-background"></div>
-        </div>
-        
-        <div className="relative z-10 max-w-3xl w-full text-center px-6 pb-32">
-          <div className="space-y-10">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-display tracking-[0.2em] text-white" data-testid="text-hero-title">
-              LEYLA & BRYCE
-            </h1>
-            
-            <div className="flex items-center justify-center gap-4">
-              <div className="h-px w-16 bg-white/40"></div>
-              <p className="text-sm md:text-base font-display tracking-[0.3em] text-white/90" data-testid="text-hero-subtitle">
-                ARE GETTING MARRIED
-              </p>
-              <div className="h-px w-16 bg-white/40"></div>
+      {/* Perfect 2x2 Grid - No Gaps */}
+      <div className="grid grid-rows-4 lg:grid-rows-2 grid-cols-1 lg:grid-cols-2 h-auto lg:h-[200vh]">
+        {/* Top Left - Invitation */}
+        <div className="flex items-center justify-center bg-background px-4 sm:px-6 py-12 sm:py-16 lg:py-0">
+          <div className="max-w-lg w-full text-center animate-slide-in-left">
+            {/* Decorative Element */}
+            <div className="flex items-center justify-center mb-10">
+              <div className="h-px w-24 bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
+              <div className="mx-6 text-primary/70 text-2xl">
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+              </div>
+              <div className="h-px w-24 bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
             </div>
             
-            <div className="space-y-2 text-lg md:text-xl text-white/95">
-              <p className="tracking-wider" data-testid="text-hero-date">October 1, 2026</p>
-              <p className="tracking-wider" data-testid="text-hero-location">Akyaka, Turkiye</p>
+            {/* Wedding Invitation Text */}
+            <div className="space-y-8">
+              <p className="text-sm md:text-base font-display tracking-[0.5em] text-muted-foreground uppercase font-medium" data-testid="text-hero-invitation">
+                You are invited to the wedding of
+              </p>
+              
+              <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-display font-light tracking-[0.05em] text-foreground leading-tight" data-testid="text-hero-title">
+                <span className="block drop-shadow-sm">Leyla Fıratlı</span>
+                <span className="block text-lg sm:text-xl md:text-2xl lg:text-3xl font-extralight tracking-[0.4em] text-muted-foreground mt-3">&</span>
+                <span className="block drop-shadow-sm">Bryce Merrill</span>
+              </h1>
+              
+              <div className="space-y-4 text-base md:text-lg text-muted-foreground">
+                <p className="tracking-wider font-medium" data-testid="text-hero-date">September 24th, 2026</p>
+                <p className="tracking-wider font-medium" data-testid="text-hero-location">Akyaka, Turkiye</p>
+              </div>
+              
+              {/* RSVP Button */}
+              <div className="pt-8">
+                <a 
+                  href="/rsvp"
+                  className="group inline-block px-10 py-4 bg-primary text-primary-foreground font-display tracking-wider uppercase text-sm hover:bg-primary/90 transition-all duration-300 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                >
+                  <span className="relative z-10">RSVP</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Top Right - Engagement Photo */}
+        <div className="relative animate-slide-in-right h-64 sm:h-80 lg:h-full">
+          <img
+            src={photo1}
+            alt="Leyla and Bryce engagement photo"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+        </div>
+        
+        {/* Bottom Left - Sitting Photo */}
+        <div className="relative animate-slide-in-left h-64 sm:h-80 lg:h-full">
+          <img
+            src={photo2}
+            alt="Leyla and Bryce sitting and holding hands"
+            className="w-full h-full object-cover object-left"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+        </div>
+        
+        {/* Bottom Right - Details */}
+        <div className="flex items-center justify-center bg-background px-4 sm:px-6 py-12 sm:py-16 lg:py-0">
+          <div className="max-w-lg w-full text-center animate-slide-in-right">
+            {/* Decorative Element */}
+            <div className="flex items-center justify-center mb-10">
+              <div className="h-px w-24 bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
+              <div className="mx-6 text-primary/70 text-2xl">
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+              </div>
+              <div className="h-px w-24 bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
+            </div>
+            
+            {/* Wedding Details */}
+            <div className="space-y-8">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-light tracking-[0.05em] text-foreground leading-tight" data-testid="text-details-title">
+                The Details
+              </h2>
+              
+              <div className="space-y-6 text-base md:text-lg text-muted-foreground leading-relaxed">
+                <p>
+                  Join us for a weekend of celebration in the beautiful coastal town of Akyaka, Turkiye. 
+                  After years of calling this place home, we can't imagine a more perfect setting to begin 
+                  our journey as a married couple.
+                </p>
+                <p>
+                  From coastal adventures to an unforgettable evening under the stars, we're creating 
+                  memories that will last a lifetime. The turquoise waters of the Aegean meet warm 
+                  Mediterranean hospitality in this hidden gem.
+                </p>
+                <p>
+                  We've planned a weekend filled with love, laughter, and the natural beauty that makes 
+                  Akyaka so special to us. Come celebrate with us as we say "I do" surrounded by the 
+                  people we love most.
+                </p>
+              </div>
+              
+              {/* CTA Button */}
+              <div className="pt-8">
+                <a 
+                  href="/schedule"
+                  className="group inline-block px-10 py-4 bg-primary text-primary-foreground font-display tracking-wider uppercase text-sm hover:bg-primary/90 transition-all duration-300 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                >
+                  <span className="relative z-10">View Schedule</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <InfoSection
-        title="Join Us in Paradise"
-        description="We're thrilled to invite you to celebrate our wedding in the beautiful coastal town of Akyaka, Turkiye"
+      {/* About Akyaka Section */}
+      <section 
+        className="py-16 md:py-20 bg-cover bg-center bg-fixed relative"
+        style={{ backgroundImage: `url(${akyakaBackground})` }}
       >
-        <div className="max-w-2xl mx-auto text-center space-y-6">
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            After years of calling Akyaka home, we can't imagine a more perfect
-            place to begin our journey as a married couple. Join us for a
-            weekend of celebration, where the turquoise waters of the Aegean
-            meet warm Mediterranean hospitality.
-          </p>
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            From coastal adventures to an unforgettable evening under the stars,
-            we're creating memories that will last a lifetime, and we want you
-            there with us.
-          </p>
+        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+          <div className="max-w-4xl mx-auto">
+            <div className="space-y-6">
+              <div className="flex items-center justify-center gap-4 mb-6">
+                <div className="h-px w-12 bg-primary/40"></div>
+                <div className="mx-6 text-primary/70 text-2xl">
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                  </svg>
+                </div>
+                <div className="h-px w-12 bg-primary/40"></div>
+              </div>
+              
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-light text-white text-center">
+                About Akyaka
+              </h2>
+              
+              <p className="text-base sm:text-lg text-white/90 leading-relaxed text-center">
+                Nestled between the azure Aegean Sea and the pine-covered mountains, 
+                Akyaka is a hidden gem that has captured our hearts. This charming 
+                coastal town offers the perfect blend of natural beauty and authentic 
+                Turkish hospitality.
+              </p>
+              
+              <p className="text-base sm:text-lg text-white/90 leading-relaxed text-center">
+                From the crystal-clear waters of the Azmak River to the traditional 
+                Ottoman architecture, Akyaka provides an idyllic backdrop for our 
+                special day. Join us in this Mediterranean paradise where every 
+                sunset paints the sky in golden hues.
+              </p>
+              
+              <div className="pt-4 flex justify-center">
+                <a 
+                  href="/travel"
+                  className="group inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 bg-primary text-primary-foreground font-display tracking-wider uppercase text-sm hover:bg-primary/90 transition-all duration-300 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                >
+                  <span className="relative z-10">Travel Information</span>
+                  <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+                </a>
+              </div>
+            </div>
+            
+          </div>
         </div>
-      </InfoSection>
+      </section>
 
-      <div className="max-w-5xl mx-auto px-6 md:px-8 lg:px-12 pb-12">
-        <img
-          src={photo2}
-          alt="Akyaka coastline"
-          className="w-full h-auto rounded-md object-cover"
-          data-testid="img-coastline"
-        />
-      </div>
     </div>
   );
 }
