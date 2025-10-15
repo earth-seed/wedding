@@ -10,6 +10,7 @@ const navItems = [
   { path: "/schedule", label: "Schedule" },
   { path: "/registry", label: "Registry" },
   { path: "/rsvp", label: "RSVP" },
+  { path: "/faq", label: "FAQ" },
 ];
 
 export default function Navigation() {
