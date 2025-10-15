@@ -5,29 +5,31 @@ import photo2 from "@assets/untitled-384_1760454997301.jpg";
 export default function Home() {
   return (
     <div>
-      <div className="relative min-h-screen flex items-center justify-center">
+      <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center scale-105"
           style={{ backgroundImage: `url(${photo1})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-background"></div>
         </div>
         
-        <div className="relative z-10 max-w-2xl w-full text-center space-y-12 px-6 py-20">
-          <div className="space-y-8">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif uppercase tracking-wider text-white drop-shadow-lg" data-testid="text-hero-title">
-              Leyla & Bryce
+        <div className="relative z-10 max-w-3xl w-full text-center px-6 pb-32">
+          <div className="space-y-10">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-display tracking-[0.2em] text-white" data-testid="text-hero-title">
+              LEYLA & BRYCE
             </h1>
             
-            <div className="w-24 h-px bg-white/60 mx-auto"></div>
+            <div className="flex items-center justify-center gap-4">
+              <div className="h-px w-16 bg-white/40"></div>
+              <p className="text-sm md:text-base font-display tracking-[0.3em] text-white/90" data-testid="text-hero-subtitle">
+                ARE GETTING MARRIED
+              </p>
+              <div className="h-px w-16 bg-white/40"></div>
+            </div>
             
-            <p className="text-lg md:text-xl font-serif text-white/90 tracking-widest drop-shadow-md" data-testid="text-hero-subtitle">
-              ARE GETTING MARRIED
-            </p>
-            
-            <div className="space-y-3 text-base md:text-lg font-sans text-white/95 drop-shadow-md">
-              <p className="tracking-wide" data-testid="text-hero-date">October 1, 2026</p>
-              <p className="tracking-wide" data-testid="text-hero-location">Akyaka, Turkiye</p>
+            <div className="space-y-2 text-lg md:text-xl text-white/95">
+              <p className="tracking-wider" data-testid="text-hero-date">October 1, 2026</p>
+              <p className="tracking-wider" data-testid="text-hero-location">Akyaka, Turkiye</p>
             </div>
           </div>
         </div>
