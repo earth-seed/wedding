@@ -2,7 +2,7 @@ import nodemailer from "nodemailer";
 import { type Rsvp } from "@shared/schema";
 
 // Email configuration
-const transporter = nodemailer.createTransporter({
+const transporter = nodemailer.createTransport({
   service: "gmail", // You can change this to any email service
   auth: {
     user: process.env.EMAIL_USER, // Your email
@@ -12,6 +12,7 @@ const transporter = nodemailer.createTransporter({
 
 export async function sendRsvpNotification(rsvp: Rsvp): Promise<void> {
   const attendingText = rsvp.attending ? "✅ WILL BE ATTENDING" : "❌ CANNOT ATTEND";
+  const guestCountText = rsvp.numberOfGuests ? `\nNumber of Guests: ${rsvp.numberOfGuests}` : "";
   const dietaryText = rsvp.dietaryPreferences ? `\nDietary Preferences: ${rsvp.dietaryPreferences}` : "";
   const messageText = rsvp.message ? `\nMessage: ${rsvp.message}` : "";
 
@@ -23,7 +24,7 @@ export async function sendRsvpNotification(rsvp: Rsvp): Promise<void> {
 New Wedding RSVP Received!
 
 Guest Name: ${rsvp.guestName}
-Status: ${attendingText}${dietaryText}${messageText}
+Status: ${attendingText}${guestCountText}${dietaryText}${messageText}
 
 Submitted: ${rsvp.createdAt.toLocaleString()}
     `.trim(),
@@ -31,6 +32,7 @@ Submitted: ${rsvp.createdAt.toLocaleString()}
       <h2>New Wedding RSVP Received!</h2>
       <p><strong>Guest Name:</strong> ${rsvp.guestName}</p>
       <p><strong>Status:</strong> ${attendingText}</p>
+      ${rsvp.numberOfGuests ? `<p><strong>Number of Guests:</strong> ${rsvp.numberOfGuests}</p>` : ""}
       ${rsvp.dietaryPreferences ? `<p><strong>Dietary Preferences:</strong> ${rsvp.dietaryPreferences}</p>` : ""}
       ${rsvp.message ? `<p><strong>Message:</strong> ${rsvp.message}</p>` : ""}
       <p><em>Submitted: ${rsvp.createdAt.toLocaleString()}</em></p>

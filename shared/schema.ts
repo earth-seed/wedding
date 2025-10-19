@@ -21,6 +21,7 @@ export const rsvps = pgTable("rsvps", {
   id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
   guestName: text("guest_name").notNull(),
   attending: boolean("attending").notNull(),
+  numberOfGuests: text("number_of_guests").default("1"),
   dietaryPreferences: text("dietary_preferences"),
   message: text("message"),
   createdAt: timestamp("created_at").defaultNow().notNull(),
@@ -29,6 +30,7 @@ export const rsvps = pgTable("rsvps", {
 export const insertRsvpSchema = createInsertSchema(rsvps).omit({
   id: true,
   createdAt: true,
+  numberOfGuests: true,
 });
 
 export type InsertRsvp = z.infer<typeof insertRsvpSchema>;

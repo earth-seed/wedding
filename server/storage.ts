@@ -12,6 +12,7 @@ export interface IStorage {
   createUser(user: InsertUser): Promise<User>;
   createRsvp(rsvp: InsertRsvp): Promise<Rsvp>;
   getAllRsvps(): Promise<Rsvp[]>;
+  updateRsvp(id: string, updates: Partial<InsertRsvp>): Promise<Rsvp | undefined>;
 }
 
 export class FileStorage implements IStorage {
@@ -85,6 +86,7 @@ export class FileStorage implements IStorage {
       id,
       guestName: insertRsvp.guestName,
       attending: insertRsvp.attending,
+      numberOfGuests: "1", // Always default to 1 guest
       dietaryPreferences: insertRsvp.dietaryPreferences ?? null,
       message: insertRsvp.message ?? null,
       createdAt: new Date(),
@@ -96,6 +98,31 @@ export class FileStorage implements IStorage {
 
   async getAllRsvps(): Promise<Rsvp[]> {
     return Array.from(this.rsvps.values());
+  }
+
+  async updateRsvp(id: string, updates: Partial<InsertRsvp>): Promise<Rsvp | undefined> {
+    console.log("Storage updateRsvp called with:", { id, updates });
+    
+    const existingRsvp = this.rsvps.get(id);
+    if (!existingRsvp) {
+      console.log("RSVP not found in storage for id:", id);
+      return undefined;
+    }
+
+    console.log("Existing RSVP:", existingRsvp);
+
+    const updatedRsvp: Rsvp = {
+      ...existingRsvp,
+      ...updates,
+      id: existingRsvp.id, // Ensure ID doesn't change
+      createdAt: existingRsvp.createdAt, // Ensure createdAt doesn't change
+    };
+
+    console.log("Updated RSVP:", updatedRsvp);
+
+    this.rsvps.set(id, updatedRsvp);
+    this.saveRsvps(); // Save to file immediately
+    return updatedRsvp;
   }
 }
 

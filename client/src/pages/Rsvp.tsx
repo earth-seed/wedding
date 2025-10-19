@@ -74,10 +74,10 @@ export default function Rsvp() {
                 name="guestName"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Your Name</FormLabel>
+                    <FormLabel>Your Name(s)</FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="Enter your full name"
+                        placeholder="Your Name(s)"
                         {...field}
                         data-testid="input-guest-name"
                       />
@@ -111,6 +111,7 @@ export default function Rsvp() {
                   </FormItem>
                 )}
               />
+
 
               <FormField
                 control={form.control}
