@@ -37,7 +37,7 @@ export default function Admin() {
   const queryClient = useQueryClient();
 
   const { data: rsvps, isLoading, error: queryError } = useQuery({
-    queryKey: ["/api/rsvps"],
+    queryKey: ["/api/rsvp"],
     queryFn: getQueryFn({ on401: "throw" }),
     enabled: isAuthenticated, // Only fetch when authenticated
   });
@@ -45,7 +45,7 @@ export default function Admin() {
   const updateRsvpMutation = useMutation({
     mutationFn: async ({ id, updates }: { id: string; updates: Partial<Rsvp> }) => {
       console.log("Updating RSVP:", { id, updates });
-      const url = `/api/rsvp/${id}`;
+      const url = `/api/rsvp-update/${id}`;
       console.log("Making request to:", url);
       try {
         const response = await apiRequest("PUT", url, updates);
@@ -135,7 +135,7 @@ export default function Admin() {
 
   // Test API connectivity
   useEffect(() => {
-    fetch("/api/test")
+    fetch("/api/rsvp")
       .then(res => res.json())
       .then(data => console.log("API test response:", data))
       .catch(err => console.error("API test failed:", err));
