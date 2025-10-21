@@ -17,6 +17,8 @@ export default function Venue() {
           src={venue1}
           alt="NUUP Hotel exterior"
           className="w-full h-full object-cover"
+          loading="eager"
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
         <div className="absolute inset-0 flex items-end">
