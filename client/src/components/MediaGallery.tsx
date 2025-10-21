@@ -64,6 +64,7 @@ export default function MediaGallery({ items }: MediaGalleryProps) {
               <img
                 src={item.src}
                 alt={item.alt}
+                loading="lazy"
                 className="w-full h-full object-cover"
               />
             ) : (
