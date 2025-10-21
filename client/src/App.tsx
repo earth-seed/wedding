@@ -4,6 +4,7 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Navigation from "@/components/Navigation";
+import PasswordProtection from "@/components/PasswordProtection";
 import Home from "@/pages/Home";
 import Travel from "@/pages/Travel";
 import Venue from "@/pages/Venue";
@@ -34,6 +35,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
+        <PasswordProtection />
         <Navigation />
         <Router />
         <Toaster />
