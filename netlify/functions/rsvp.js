@@ -1,5 +1,11 @@
-const { storage } = require('./storage');
-const { sendRsvpNotification } = require('./email');
+// Simple in-memory storage for Netlify Functions
+let rsvps = [];
+
+// Simple email function (you'll need to add nodemailer to package.json)
+const sendRsvpNotification = async (rsvp) => {
+  console.log('RSVP notification:', rsvp);
+  // Email functionality will be added later
+};
 
 // Simple validation schema for Netlify Functions
 const validateRsvp = (data) => {
@@ -38,7 +44,15 @@ exports.handler = async (event, context) => {
       // Create new RSVP
       const body = JSON.parse(event.body);
       const validatedData = validateRsvp(body);
-      const rsvp = await storage.createRsvp(validatedData);
+      
+      const rsvp = {
+        id: Math.random().toString(36).substr(2, 9),
+        ...validatedData,
+        numberOfGuests: "1",
+        createdAt: new Date().toISOString(),
+      };
+      
+      rsvps.push(rsvp);
       
       // Send email notification
       await sendRsvpNotification(rsvp);
@@ -55,8 +69,6 @@ exports.handler = async (event, context) => {
 
     if (event.httpMethod === 'GET') {
       // Get all RSVPs
-      const rsvps = await storage.getAllRsvps();
-      
       return {
         statusCode: 200,
         headers: {

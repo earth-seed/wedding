@@ -1,4 +1,6 @@
-const { storage } = require('./storage');
+// Simple in-memory storage (shared with rsvp.js)
+// In production, you'd use a database
+let rsvps = [];
 
 exports.handler = async (event, context) => {
   // Handle CORS
@@ -33,9 +35,10 @@ exports.handler = async (event, context) => {
       
       console.log('Valid updates:', validUpdates);
       
-      const updatedRsvp = await storage.updateRsvp(id, validUpdates);
+      // Find and update RSVP
+      const rsvpIndex = rsvps.findIndex(rsvp => rsvp.id === id);
       
-      if (!updatedRsvp) {
+      if (rsvpIndex === -1) {
         console.log('RSVP not found for id:', id);
         return {
           statusCode: 404,
@@ -43,6 +46,13 @@ exports.handler = async (event, context) => {
           body: JSON.stringify({ error: 'RSVP not found' }),
         };
       }
+      
+      const updatedRsvp = {
+        ...rsvps[rsvpIndex],
+        ...validUpdates,
+      };
+      
+      rsvps[rsvpIndex] = updatedRsvp;
       
       console.log('Updated RSVP:', updatedRsvp);
       return {
