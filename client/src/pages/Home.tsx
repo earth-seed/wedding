@@ -60,6 +60,8 @@ export default function Home() {
             src={photo1}
             alt="Leyla and Bryce engagement photo"
             className="w-full h-full object-cover"
+            loading="eager"
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
         </div>
@@ -70,6 +72,8 @@ export default function Home() {
             src={photo2}
             alt="Leyla and Bryce sitting and holding hands"
             className="w-full h-full object-cover object-left"
+            loading="eager"
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
         </div>
@@ -122,7 +126,10 @@ export default function Home() {
       {/* About Akyaka Section */}
       <section 
         className="py-16 md:py-20 bg-cover bg-center relative"
-        style={{ backgroundImage: `url(${akyakaBackground})` }}
+        style={{ 
+          backgroundImage: `url(${akyakaBackground})`,
+          backgroundAttachment: 'fixed'
+        }}
       >
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
