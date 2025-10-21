@@ -1,12 +1,12 @@
 import InfoSection from "@/components/InfoSection";
-import venue1 from "@assets/Screenshot 2025-10-15 at 12.26.43.png";
-import venue2 from "@assets/Screenshot 2025-10-15 at 12.27.00.png";
-import venue3 from "@assets/Screenshot 2025-10-15 at 12.27.16.png";
-import venue4 from "@assets/Screenshot 2025-10-15 at 12.28.39.png";
-import venue5 from "@assets/Screenshot 2025-10-15 at 12.28.51.png";
-import venue6 from "@assets/Screenshot 2025-10-15 at 12.30.14.png";
-import venue7 from "@assets/Screenshot 2025-10-15 at 12.30.43.png";
-import venue8 from "@assets/Screenshot 2025-10-15 at 12.38.08.png";
+import venue1 from "@assets/Screenshot 2025-10-15 at 12.26.43.webp";
+import venue2 from "@assets/Screenshot 2025-10-15 at 12.27.00.webp";
+import venue3 from "@assets/Screenshot 2025-10-15 at 12.27.16.webp";
+import venue4 from "@assets/Screenshot 2025-10-15 at 12.28.39.webp";
+import venue5 from "@assets/Screenshot 2025-10-15 at 12.28.51.webp";
+import venue6 from "@assets/Screenshot 2025-10-15 at 12.30.14.webp";
+import venue7 from "@assets/Screenshot 2025-10-15 at 12.30.43.webp";
+import venue8 from "@assets/Screenshot 2025-10-15 at 12.38.08.webp";
 
 export default function Venue() {
   return (

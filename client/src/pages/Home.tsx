@@ -1,8 +1,8 @@
 import InfoSection from "@/components/InfoSection";
 import MediaGallery from "@/components/MediaGallery";
-import photo1 from "@assets/10-14-25-Engagement-466_1760454989749.jpg";
-import photo2 from "@assets/10-14-25-Engagement-374_1760455012794.jpg";
-import akyakaBackground from "@assets/Turkiye-Fall-2024-494.jpg";
+import photo1 from "@assets/10-14-25-Engagement-466_1760454989749.webp";
+import photo2 from "@assets/10-14-25-Engagement-374_1760455012794.webp";
+import akyakaBackground from "@assets/Turkiye-Fall-2024-494.webp";
 
 export default function Home() {
   return (

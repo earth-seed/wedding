@@ -1,10 +1,10 @@
 import { useState } from "react";
-import photo1 from "@assets/10-14-25-Engagement-466_1760454989749.jpg";
-import photo2 from "@assets/10-14-25-Engagement-374_1760455012794.jpg";
-import photo3 from "@assets/untitled-384_1760454997301.jpg";
-import photo4 from "@assets/image_1759244048652.png";
-import photo5 from "@assets/image_1759244086022.png";
-import photo6 from "@assets/image_1759244171033.png";
+import photo1 from "@assets/10-14-25-Engagement-466_1760454989749.webp";
+import photo2 from "@assets/10-14-25-Engagement-374_1760455012794.webp";
+import photo3 from "@assets/untitled-384_1760454997301.webp";
+import photo4 from "@assets/image_1759244048652.webp";
+import photo5 from "@assets/image_1759244086022.webp";
+import photo6 from "@assets/image_1759244171033.webp";
 
 interface MediaItem {
   id: string;
