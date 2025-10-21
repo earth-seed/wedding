@@ -58,6 +58,8 @@ export default function Venue() {
                   src={venue2}
                   alt="NUUP Hotel grounds"
                   className="w-full h-[28rem] object-cover rounded-lg shadow-xl"
+                  loading="eager"
+                  fetchPriority="high"
                 />
               </div>
             </div>
@@ -75,6 +77,8 @@ export default function Venue() {
                   src={venue3}
                   alt="NUUP Hotel interior"
                   className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                  loading="eager"
+                  fetchPriority="high"
                 />
               </div>
               <div className="relative overflow-hidden rounded-lg shadow-lg">
@@ -82,6 +86,8 @@ export default function Venue() {
                   src={venue4}
                   alt="NUUP Hotel grounds"
                   className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                  loading="eager"
+                  fetchPriority="high"
                 />
               </div>
               <div className="relative overflow-hidden rounded-lg shadow-lg">
@@ -89,6 +95,8 @@ export default function Venue() {
                   src={venue5}
                   alt="NUUP Hotel facilities"
                   className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                  loading="eager"
+                  fetchPriority="high"
                 />
               </div>
               <div className="relative overflow-hidden rounded-lg shadow-lg">
@@ -96,6 +104,8 @@ export default function Venue() {
                   src={venue6}
                   alt="NUUP Hotel garden"
                   className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                  loading="eager"
+                  fetchPriority="high"
                 />
               </div>
               <div className="relative overflow-hidden rounded-lg shadow-lg">
@@ -103,6 +113,8 @@ export default function Venue() {
                   src={venue7}
                   alt="NUUP Hotel view"
                   className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                  loading="eager"
+                  fetchPriority="high"
                 />
               </div>
               <div className="relative overflow-hidden rounded-lg shadow-lg">
@@ -110,6 +122,8 @@ export default function Venue() {
                   src={venue8}
                   alt="NUUP Hotel additional view"
                   className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                  loading="eager"
+                  fetchPriority="high"
                 />
               </div>
             </div>

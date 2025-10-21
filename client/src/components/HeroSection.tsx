@@ -14,6 +14,8 @@ export default function HeroSection({
         alt={alt}
         className="w-full h-[70vh] object-cover"
         data-testid="image-hero"
+        loading="eager"
+        fetchPriority="high"
       />
     </div>
   );
