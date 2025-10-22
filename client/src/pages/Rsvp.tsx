@@ -68,7 +68,7 @@ export default function Rsvp() {
       >
         <div className="max-w-2xl mx-auto">
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 sm:space-y-8">
               <FormField
                 control={form.control}
                 name="guestName"
@@ -158,7 +158,7 @@ export default function Rsvp() {
                   type="submit"
                   size="lg"
                   disabled={rsvpMutation.isPending}
-                  className="px-12"
+                  className="px-8 sm:px-12"
                   data-testid="button-submit-rsvp"
                 >
                   {rsvpMutation.isPending ? "Submitting..." : "Submit RSVP"}
