@@ -57,6 +57,19 @@ export default function Travel() {
                   Contact us for Nuup Hotel booking details and special rates
                 </p>
               </div>
+
+              <div>
+                <h4 className="font-serif text-lg mb-2">House Rentals</h4>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  For guests planning to stay longer and prefer the comfort of a home over a hotel, we have friends and neighbors 
+                  who rent beautiful houses in the area. These properties offer more space, outdoor areas and the opportunity to experience 
+                  local life in Akyaka.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  We'd love to connect you with them! If you're interested in renting a house for your stay, 
+                  please reach out to us and we'll put you in touch with our friends who have beautiful rental properties.
+                </p>
+              </div>
             </div>
           </div>
 
