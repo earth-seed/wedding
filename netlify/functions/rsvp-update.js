@@ -28,10 +28,12 @@ exports.handler = async (event, context) => {
 
   try {
     if (event.httpMethod === 'PUT') {
-      const { id } = event.pathParameters;
+      // Extract ID from the path - handle both /api/rsvp-update/{id} and /rsvp-update/{id}
+      const pathParts = event.path.split('/');
+      const id = pathParts[pathParts.length - 1];
       const updates = JSON.parse(event.body);
       
-      console.log('Update request:', { id, updates });
+      console.log('Update request:', { id, updates, path: event.path, pathParts });
       
       // Validate the updates
       const validUpdates = {};
