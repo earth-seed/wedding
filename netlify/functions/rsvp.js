@@ -102,7 +102,7 @@ exports.handler = async (event, context) => {
         id: Math.random().toString(36).substr(2, 9),
         ...validatedData,
         numberOfGuests: "1",
-        createdAt: new Date(),
+        createdAt: admin.firestore.Timestamp.now(),
       };
       
       // Save to Firebase
@@ -126,7 +126,12 @@ exports.handler = async (event, context) => {
       const snapshot = await db.collection('rsvps').orderBy('createdAt', 'desc').get();
       const rsvps = [];
       snapshot.forEach(doc => {
-        rsvps.push({ id: doc.id, ...doc.data() });
+        const data = doc.data();
+        // Convert Firestore Timestamp to JavaScript Date
+        if (data.createdAt && data.createdAt.toDate) {
+          data.createdAt = data.createdAt.toDate();
+        }
+        rsvps.push({ id: doc.id, ...data });
       });
       
       return {

@@ -60,7 +60,7 @@ export default function Admin() {
       }
     },
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ["/api/rsvps"] });
+      queryClient.invalidateQueries({ queryKey: ["/api/rsvp"] });
       setEditingId(null);
       setEditForm({});
       toast({
