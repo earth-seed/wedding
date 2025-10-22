@@ -31,25 +31,6 @@ export default function Registry() {
             </div>
 
             <div className="border-l-2 border-primary/30 pl-8 py-6">
-            <h3 className="text-2xl font-serif mb-4">Honeymoon Fund</h3>
-            <p className="text-lg text-foreground mb-4 leading-relaxed">
-              If you'd also like to give us a personal gift, we've set up a
-              honeymoon fund.
-            </p>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              We're planning an adventure to explore new destinations after our wedding.
-              Your contribution will help make our honeymoon dreams come true.
-            </p>
-            <button
-              onClick={() => console.log("Honeymoon fund clicked")}
-              className="px-8 py-3 bg-primary text-primary-foreground border border-primary-border hover:bg-primary/90 transition-colors rounded-lg font-display tracking-wider uppercase text-sm"
-              data-testid="button-honeymoon-fund"
-            >
-              Contribute to Honeymoon Fund
-            </button>
-            </div>
-
-            <div className="border-l-2 border-primary/30 pl-8 py-6">
             <h3 className="text-2xl font-serif mb-4">Turkish Wedding Customs</h3>
             <p className="text-lg text-foreground mb-4 leading-relaxed">
               Following Turkish wedding tradition, guests often bring gold as a gift to the couple.
@@ -58,6 +39,25 @@ export default function Registry() {
               This tradition symbolizes prosperity and good fortune for the newlyweds. 
               If you'd like to participate in this beautiful custom, there will be a place to contribute during the ceremony.
             </p>
+            </div>
+
+            <div className="border-l-2 border-primary/30 pl-8 py-6">
+            <h3 className="text-2xl font-serif mb-4">For Those Who Can't Join Us</h3>
+            <p className="text-lg text-foreground mb-4 leading-relaxed">
+              We understand that traveling to Türkiye might not be possible for everyone. 
+              If you'd like to contribute from afar, we've created a way for you to do so.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              We're planning to explore new places together after our wedding, and if you'd like to help make that possible, 
+              we'd be so grateful for your support.
+            </p>
+            <button
+              onClick={() => console.log("Honeymoon fund clicked")}
+              className="px-8 py-3 bg-primary text-primary-foreground border border-primary-border hover:bg-primary/90 transition-colors rounded-lg font-display tracking-wider uppercase text-sm"
+              data-testid="button-honeymoon-fund"
+            >
+              Contribute Here
+            </button>
             </div>
 
             <div className="text-center pt-8">
