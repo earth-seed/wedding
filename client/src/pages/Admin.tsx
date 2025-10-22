@@ -22,7 +22,7 @@ interface Rsvp {
   numberOfGuests: string;
   dietaryPreferences: string | null;
   message: string | null;
-  createdAt: string;
+  createdAt: Date | string;
 }
 
 export default function Admin() {

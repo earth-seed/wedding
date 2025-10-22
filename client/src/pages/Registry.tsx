@@ -52,7 +52,7 @@ export default function Registry() {
               we'd be so grateful for your support.
             </p>
             <button
-              onClick={() => console.log("Honeymoon fund clicked")}
+              onClick={() => window.open("https://venmo.com/u/Bryce-Merrill", "_blank")}
               className="px-8 py-3 bg-primary text-primary-foreground border border-primary-border hover:bg-primary/90 transition-colors rounded-lg font-display tracking-wider uppercase text-sm"
               data-testid="button-honeymoon-fund"
             >

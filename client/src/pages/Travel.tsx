@@ -99,16 +99,15 @@ export default function Travel() {
                 <h4 className="font-serif text-lg mb-2">Istanbul</h4>
                 <p className="text-muted-foreground leading-relaxed">
                   Leyla's hometown and honestly one of the most interesting cities in the world. You can't miss the Hagia Sophia 
-                  and Blue Mosque, but we also love wandering around Beyoğlu and Kadıköy for great food and coffee. 
+                  and Blue Mosque, but we also love wandering around Galata and Kadıköy for great food and coffee. 
                   The city has two airports and good public transport, so it's easy to get around.
                 </p>
               </div>
               <div>
                 <h4 className="font-serif text-lg mb-2">Cappadocia</h4>
                 <p className="text-muted-foreground leading-relaxed">
-                  This place is pretty surreal - imagine staying in a cave hotel and watching hot air balloons at sunrise. 
-                  The balloon rides are amazing but depend on weather, so spring or fall are your best bets. 
-                  The underground cities are fascinating, and the hiking is great too.
+                  This region is surreal - we recommend staying in a cave hotel and just exploring the towns and surrounding areas.
+                  Ensure you wake up for sunrise to watch (or go on) the hot air balloons and check out the underground cities.
                 </p>
               </div>
               <div>

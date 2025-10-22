@@ -14,6 +14,10 @@ const db = admin.firestore();
 // Email function using Nodemailer
 const sendRsvpNotification = async (rsvp) => {
   try {
+    console.log('Email function called with RSVP:', rsvp);
+    console.log('EMAIL_USER:', process.env.EMAIL_USER ? 'Set' : 'Not set');
+    console.log('EMAIL_PASS:', process.env.EMAIL_PASS ? 'Set' : 'Not set');
+    
     // Create transporter
     const transporter = nodemailer.createTransporter({
       service: 'gmail',
@@ -109,7 +113,9 @@ exports.handler = async (event, context) => {
       await db.collection('rsvps').doc(rsvp.id).set(rsvp);
       
       // Send email notification
+      console.log('Attempting to send email notification...');
       await sendRsvpNotification(rsvp);
+      console.log('Email notification sent successfully');
       
       return {
         statusCode: 200,
@@ -133,6 +139,8 @@ exports.handler = async (event, context) => {
         }
         rsvps.push({ id: doc.id, ...data });
       });
+      
+      console.log('RSVPs from Firebase:', rsvps);
       
       return {
         statusCode: 200,
