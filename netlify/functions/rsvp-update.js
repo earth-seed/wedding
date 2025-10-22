@@ -35,13 +35,32 @@ exports.handler = async (event, context) => {
       
       // Validate the updates
       const validUpdates = {};
-      if (updates.guestName !== undefined) validUpdates.guestName = updates.guestName;
-      if (updates.attending !== undefined) validUpdates.attending = updates.attending;
-      if (updates.numberOfGuests !== undefined) validUpdates.numberOfGuests = updates.numberOfGuests;
-      if (updates.dietaryPreferences !== undefined) validUpdates.dietaryPreferences = updates.dietaryPreferences;
-      if (updates.message !== undefined) validUpdates.message = updates.message;
+      if (updates.guestName !== undefined && typeof updates.guestName === 'string') {
+        validUpdates.guestName = updates.guestName;
+      }
+      if (updates.attending !== undefined && typeof updates.attending === 'boolean') {
+        validUpdates.attending = updates.attending;
+      }
+      if (updates.numberOfGuests !== undefined) {
+        validUpdates.numberOfGuests = updates.numberOfGuests;
+      }
+      if (updates.dietaryPreferences !== undefined) {
+        validUpdates.dietaryPreferences = updates.dietaryPreferences;
+      }
+      if (updates.message !== undefined) {
+        validUpdates.message = updates.message;
+      }
       
       console.log('Valid updates:', validUpdates);
+      
+      // Check if we have any valid updates
+      if (Object.keys(validUpdates).length === 0) {
+        return {
+          statusCode: 400,
+          headers,
+          body: JSON.stringify({ error: 'No valid updates provided' }),
+        };
+      }
       
       // Update RSVP in Firebase
       const rsvpRef = db.collection('rsvps').doc(id);
@@ -56,12 +75,11 @@ exports.handler = async (event, context) => {
         };
       }
       
-      const updatedRsvp = {
-        ...rsvpDoc.data(),
-        ...validUpdates,
-      };
-      
       await rsvpRef.update(validUpdates);
+      
+      // Get the updated document
+      const updatedDoc = await rsvpRef.get();
+      const updatedRsvp = { id: updatedDoc.id, ...updatedDoc.data() };
       
       console.log('Updated RSVP:', updatedRsvp);
       return {
@@ -84,7 +102,10 @@ exports.handler = async (event, context) => {
     return {
       statusCode: 400,
       headers,
-      body: JSON.stringify({ error: 'Invalid update data' }),
+      body: JSON.stringify({ 
+        error: 'Invalid update data',
+        details: error.message 
+      }),
     };
   }
 };
