@@ -1,6 +1,14 @@
-// Simple in-memory storage (shared with rsvp.js)
-// In production, you'd use a database
-let rsvps = [];
+const admin = require('firebase-admin');
+
+// Initialize Firebase Admin
+if (!admin.apps.length) {
+  const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
+  admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount)
+  });
+}
+
+const db = admin.firestore();
 
 exports.handler = async (event, context) => {
   // Handle CORS
@@ -35,10 +43,11 @@ exports.handler = async (event, context) => {
       
       console.log('Valid updates:', validUpdates);
       
-      // Find and update RSVP
-      const rsvpIndex = rsvps.findIndex(rsvp => rsvp.id === id);
+      // Update RSVP in Firebase
+      const rsvpRef = db.collection('rsvps').doc(id);
+      const rsvpDoc = await rsvpRef.get();
       
-      if (rsvpIndex === -1) {
+      if (!rsvpDoc.exists) {
         console.log('RSVP not found for id:', id);
         return {
           statusCode: 404,
@@ -48,11 +57,11 @@ exports.handler = async (event, context) => {
       }
       
       const updatedRsvp = {
-        ...rsvps[rsvpIndex],
+        ...rsvpDoc.data(),
         ...validUpdates,
       };
       
-      rsvps[rsvpIndex] = updatedRsvp;
+      await rsvpRef.update(validUpdates);
       
       console.log('Updated RSVP:', updatedRsvp);
       return {
