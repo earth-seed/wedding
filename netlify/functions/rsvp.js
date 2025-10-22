@@ -1,4 +1,5 @@
 const admin = require('firebase-admin');
+const nodemailer = require('nodemailer');
 
 // Initialize Firebase Admin
 if (!admin.apps.length) {
@@ -12,8 +13,51 @@ const db = admin.firestore();
 
 // Email function using Nodemailer
 const sendRsvpNotification = async (rsvp) => {
-  console.log('RSVP notification:', rsvp);
-  // Email functionality will be added later
+  try {
+    // Create transporter
+    const transporter = nodemailer.createTransporter({
+      service: 'gmail',
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    });
+
+    // Email content
+    const attendingText = rsvp.attending ? "✅ Will be attending" : "❌ Cannot attend";
+    const guestCountText = rsvp.numberOfGuests ? `\nNumber of Guests: ${rsvp.numberOfGuests}` : "";
+    const dietaryText = rsvp.dietaryPreferences ? `\nDietary Preferences: ${rsvp.dietaryPreferences}` : "";
+    const messageText = rsvp.message ? `\nMessage: ${rsvp.message}` : "";
+
+    const mailOptions = {
+      from: process.env.EMAIL_USER,
+      to: process.env.NOTIFICATION_EMAIL || process.env.EMAIL_USER,
+      subject: `Wedding RSVP: ${rsvp.guestName} - ${attendingText}`,
+      text: `
+New Wedding RSVP Received!
+
+Guest Name: ${rsvp.guestName}
+Status: ${attendingText}${guestCountText}${dietaryText}${messageText}
+
+Submitted: ${rsvp.createdAt.toLocaleString()}
+      `.trim(),
+      html: `
+        <h2>New Wedding RSVP Received!</h2>
+        <p><strong>Guest Name:</strong> ${rsvp.guestName}</p>
+        <p><strong>Status:</strong> ${attendingText}</p>
+        ${rsvp.numberOfGuests ? `<p><strong>Number of Guests:</strong> ${rsvp.numberOfGuests}</p>` : ""}
+        ${rsvp.dietaryPreferences ? `<p><strong>Dietary Preferences:</strong> ${rsvp.dietaryPreferences}</p>` : ""}
+        ${rsvp.message ? `<p><strong>Message:</strong> ${rsvp.message}</p>` : ""}
+        <p><em>Submitted: ${rsvp.createdAt.toLocaleString()}</em></p>
+      `.trim(),
+    };
+
+    await transporter.sendMail(mailOptions);
+    console.log(`RSVP notification sent for ${rsvp.guestName}`);
+  } catch (error) {
+    console.error("Error sending RSVP notification:", error);
+    // Don't throw error - email failure shouldn't break RSVP submission
+  }
 };
 
 // Simple validation schema for Netlify Functions
