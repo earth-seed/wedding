@@ -122,8 +122,7 @@ export default function Travel() {
                 <h4 className="font-serif text-lg mb-2">Kas, Antalya</h4>
                 <p className="text-muted-foreground leading-relaxed">
                   Kas is a cute little coastal town perfect for diving and boat trips. The water is crystal clear, 
-                  and there are some great fish restaurants. Antalya is bigger with an airport and a charming old town. 
-                  Both are nice if you want to extend your beach time.
+                  and there are some great fish restaurants. 
                 </p>
               </div>
             </div>
