@@ -64,9 +64,9 @@ export default function FAQ() {
               </div>
               
               <div className="border-l-2 border-primary/30 pl-6 py-4">
-                <h4 className="text-lg font-display mb-2 text-foreground">Is there a dress code for the rehearsal dinner?</h4>
+                <h4 className="text-lg font-display mb-2 text-foreground">Is there a dress code for the welcome dinner?</h4>
                 <p className="text-muted-foreground leading-relaxed">
-                  The rehearsal dinner will be more casual than the wedding. Wear whatever you want!
+                  The welcome dinner will be more casual than the wedding. Wear whatever you want!
                 </p>
               </div>
             </div>

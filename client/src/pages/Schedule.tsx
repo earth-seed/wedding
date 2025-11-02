@@ -29,7 +29,7 @@ export default function Schedule() {
                   <div className="text-sm font-display tracking-wider text-primary/80 uppercase mb-2">
                     Time TBD
                   </div>
-                  <h4 className="font-serif text-lg mb-2">Rehearsal Dinner</h4>
+                  <h4 className="font-serif text-lg mb-2">Welcome Dinner</h4>
                   <p className="text-muted-foreground leading-relaxed">
                     Location TBD.
                   </p>

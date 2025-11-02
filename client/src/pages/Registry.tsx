@@ -45,11 +45,11 @@ export default function Registry() {
             <h3 className="text-2xl font-serif mb-4">For Those Who Can't Join Us</h3>
             <p className="text-lg text-foreground mb-4 leading-relaxed">
               We understand that traveling to Türkiye might not be possible for everyone. 
-              If you'd like to contribute from afar, we've created a way for you to do so.
+              If you'd like to contribute to our honeymoon fund from afar, we've created a way for you to do so.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6">
               We're planning to explore new places together after our wedding, and if you'd like to help make that possible, 
-              we'd be so grateful for your support.
+              we'd be grateful for your support.
             </p>
             <button
               onClick={() => window.open("https://venmo.com/u/Bryce-Merrill", "_blank")}

@@ -100,7 +100,7 @@ export default function Home() {
                   We would love for you to join us as we celebrate our wedding in the beautiful coastal town of Akyaka, Turkiye. 
                 </p>
                 <p>
-                  After moving here in 2024, we have fallen more in love with eachother and the dramatic seasons, 
+                  After moving here in 2024, we have fallen more in love with each other and the dramatic seasons, 
                   healing rivers, stunning Mediterranean coastline, and fragrant pine forests of the region. 
                 </p>
                 <p>
