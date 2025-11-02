@@ -38,11 +38,11 @@ export default function Navigation() {
             : "bg-transparent"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           <div className="flex items-center justify-between h-16 md:h-20">
             <Link href="/">
               <span
-                className="font-display text-xl md:text-2xl font-light tracking-wider text-foreground transition-all duration-300 hover:opacity-70 cursor-pointer"
+                className="font-display text-lg sm:text-xl md:text-2xl font-light tracking-wider text-foreground transition-all duration-300 hover:opacity-70 cursor-pointer"
                 data-testid="link-home"
               >
                 Leyla & Bryce
@@ -70,9 +70,10 @@ export default function Navigation() {
             </div>
 
             <button
-              className="md:hidden text-foreground hover:text-primary transition-colors duration-300"
+              className="md:hidden text-foreground hover:text-primary transition-colors duration-300 p-2 -mr-2"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               data-testid="button-mobile-menu"
+              aria-label="Toggle mobile menu"
             >
               {mobileMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -86,11 +87,11 @@ export default function Navigation() {
 
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-40 bg-background/98 backdrop-blur-md md:hidden pt-20 animate-fade-in">
-          <div className="flex flex-col items-center gap-8 p-12">
+          <div className="flex flex-col items-center gap-6 sm:gap-8 p-8 sm:p-12">
             {navItems.map((item, index) => (
               <Link key={item.path} href={item.path}>
                 <span
-                  className={`text-2xl font-display tracking-wider transition-all duration-300 cursor-pointer ${
+                  className={`text-xl sm:text-2xl font-display tracking-wider transition-all duration-300 cursor-pointer py-2 px-4 ${
                     location === item.path
                       ? "text-foreground"
                       : "text-muted-foreground hover:text-foreground"

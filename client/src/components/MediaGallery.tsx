@@ -50,12 +50,12 @@ export default function MediaGallery({ items }: MediaGalleryProps) {
 
   return (
     <>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
         {galleryItems.map((item, index) => (
           <div
             key={item.id}
             className={`group relative ${getAspectClass(item.aspectRatio)} overflow-hidden rounded-lg cursor-pointer hover:scale-105 transition-all duration-300 ${
-              index === 0 ? 'md:col-span-2 md:row-span-2' : ''
+              index === 0 ? 'sm:col-span-2 sm:row-span-2' : ''
             }`}
             onClick={() => setSelectedImage(item.src)}
             data-testid={`media-item-${item.id}`}
@@ -88,7 +88,7 @@ export default function MediaGallery({ items }: MediaGalleryProps) {
       {/* Lightbox Modal */}
       {selectedImage && (
         <div 
-          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-2 sm:p-4"
           onClick={() => setSelectedImage(null)}
         >
           <div className="relative max-w-4xl max-h-full">
@@ -100,9 +100,9 @@ export default function MediaGallery({ items }: MediaGalleryProps) {
             />
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute top-4 right-4 w-10 h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center text-white transition-colors duration-300"
+              className="absolute top-2 right-2 sm:top-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center text-white transition-colors duration-300"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>

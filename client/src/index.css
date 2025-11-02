@@ -247,6 +247,47 @@
     font-weight: 400;
   }
 
+  /* Mobile-specific improvements */
+  @media (max-width: 768px) {
+    body {
+      line-height: 1.6;
+      letter-spacing: 0.005em;
+    }
+    
+    /* Improve touch targets for mobile */
+    button, a, [role="button"] {
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+    /* Better text rendering on mobile */
+    h1, h2, h3, h4, h5, h6 {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    /* Optimize images for mobile */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    /* Improve scrolling on mobile */
+    * {
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Better focus states for mobile */
+    button:focus-visible,
+    a:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible,
+    select:focus-visible {
+      outline: 2px solid hsl(var(--primary));
+      outline-offset: 2px;
+    }
+  }
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-display;
     font-weight: 500;
