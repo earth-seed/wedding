@@ -12,21 +12,36 @@ export default function Registry() {
             <h3 className="text-xl sm:text-2xl font-serif mb-3 sm:mb-4">Our First Priority</h3>
             <p className="text-sm sm:text-base md:text-lg text-foreground mb-3 sm:mb-4 leading-relaxed">
               Instead of traditional gifts, we'd be honored if you would
-              consider making a donation to a charity supporting Palestinians 
-              who have escaped the ongoing genocide in their homeland and are now living in Egypt.
+              consider making a donation to a charity supporting Palestinians.
+              We have two suggested options for you to consider below.
             </p>
             <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-4 sm:mb-6">
              Our commitment for Palestinian liberation is a pillar of our relationship and we hope you'll join us in supporting this cause.
              We are against the occupation of Palestine and the existence of the apartheid state of Israel.
              We would like to only have guests at our wedding who are aligned with us on these principles.
             </p>
+            <p className="text-sm sm:text-base md:text-lg text-foreground mb-3 sm:mb-4 leading-relaxed">
+              HEAL Palestine helps improve the lives of Palestinian youth by providing essential healthcare, educational support, and humanitarian aid.
+            </p>
             <a
-              href="https://www.globalgiving.org/projects/essential-support-for-palestinians/reports/#menu"
+              href="https://healpalestine.app.neoncrm.com/leylabrycelove"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 sm:px-8 py-2.5 sm:py-3 bg-primary text-primary-foreground border border-primary-border hover:bg-primary/90 transition-colors rounded-lg font-display tracking-wider uppercase text-xs sm:text-sm mb-4"
+            >
+              Contribute to HEAL Palestine
+            </a>
+            <p className="text-sm sm:text-base md:text-lg text-foreground mb-3 sm:mb-4 leading-relaxed">
+              Bridge of Solidarity is an anti-capitalist mutual aid organization founded in Gaza by Yazan, in Al Mawasi, Khan Younis.
+              All money goes directly to people in need of support.
+            </p>
+            <a
+              href="https://chuffed.org/project/bridgeofsolidarity"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-6 sm:px-8 py-2.5 sm:py-3 bg-primary text-primary-foreground border border-primary-border hover:bg-primary/90 transition-colors rounded-lg font-display tracking-wider uppercase text-xs sm:text-sm"
             >
-              Contribute to Palestinian Support
+              Support Bridge of Solidarity
             </a>
             </div>
 
