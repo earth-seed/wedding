@@ -1,4 +1,5 @@
 import InfoSection from "@/components/InfoSection";
+import turkiyeImage from "@assets/04_Turkiye 2025_Merrill.jpg";
 
 export default function Travel() {
   return (
@@ -86,6 +87,14 @@ export default function Travel() {
               by the turquoise waters. We encourage you to arrive 
               early or stay after to explore this beautiful region and we would be happy to help you plan your trip.
             </p>
+            <div className="mt-4 sm:mt-6">
+              <img
+                src={turkiyeImage}
+                alt="Akyaka, Turkey landscape"
+                className="w-full max-w-md h-auto rounded-lg shadow-lg object-cover"
+                loading="lazy"
+              />
+            </div>
           </div>
 
           <div className="border-l-2 border-primary/30 pl-4 sm:pl-6 md:pl-8 py-4 sm:py-6">
