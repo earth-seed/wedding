@@ -32,6 +32,7 @@ export default function Rsvp() {
     defaultValues: {
       guestName: "",
       attending: true,
+      numberOfGuests: "1",
       dietaryPreferences: "",
       message: "",
     },
@@ -112,6 +113,30 @@ export default function Rsvp() {
                 )}
               />
 
+              <FormField
+                control={form.control}
+                name="numberOfGuests"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Number of People Attending</FormLabel>
+                    <Select
+                      onValueChange={field.onChange}
+                      value={field.value || "1"}
+                    >
+                      <FormControl>
+                        <SelectTrigger data-testid="select-number-of-guests">
+                          <SelectValue placeholder="Select number of guests" />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent>
+                        <SelectItem value="1">1 Guest</SelectItem>
+                        <SelectItem value="2">2 Guests</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
 
               <FormField
                 control={form.control}

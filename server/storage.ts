@@ -86,7 +86,7 @@ export class FileStorage implements IStorage {
       id,
       guestName: insertRsvp.guestName,
       attending: insertRsvp.attending,
-      numberOfGuests: "1", // Always default to 1 guest
+      numberOfGuests: insertRsvp.numberOfGuests ?? "1",
       dietaryPreferences: insertRsvp.dietaryPreferences ?? null,
       message: insertRsvp.message ?? null,
       createdAt: new Date(),

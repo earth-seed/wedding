@@ -39,18 +39,11 @@ export default function Venue() {
                 <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
                   NUUP Hotel is a unique boutique hotel nestled in a small village about 25 minutes from Akyaka. 
                   This charming property offers an authentic farm-to-table experience with its own working farm, 
-                  fresh herb garden, and pottery studio. It's the perfect blend of rustic charm and modern comfort 
-                  for our special day.
-                </p>
-                <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
-                  With only 28 rooms, NUUP provides an intimate and exclusive setting for our wedding celebration. 
-                  The hotel's commitment to sustainability and local craftsmanship makes it a truly special place 
-                  to gather with family and friends. Guests staying the night of the ceremony will enjoy a 
-                  complimentary breakfast the following morning, and we'd love to help you book your stay.
+                  fresh herb garden, and pottery studio.
                 </p>
                 <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
                   If you're interested in staying at NUUP for the wedding night, please reach out to us directly 
-                  for booking details and special rates. We can help coordinate your stay at this beautiful venue.
+                  for booking details and special rates.
                 </p>
               </div>
               <div className="md:col-span-1 relative">

@@ -30,7 +30,6 @@ export const rsvps = pgTable("rsvps", {
 export const insertRsvpSchema = createInsertSchema(rsvps).omit({
   id: true,
   createdAt: true,
-  numberOfGuests: true,
 });
 
 export type InsertRsvp = z.infer<typeof insertRsvpSchema>;
