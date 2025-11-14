@@ -102,19 +102,6 @@ export default function FAQ() {
             </div>
           </div>
 
-          {/* Gifts & Registry */}
-          <div className="animate-fade-in">
-            <div className="space-y-4 sm:space-y-6">
-              <div className="border-l-2 border-primary/30 pl-4 sm:pl-6 py-3 sm:py-4">
-                <h4 className="text-base sm:text-lg font-display mb-2 text-foreground">Can I bring a plus one?</h4>
-                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                  Please check the message you received with the invitation to confirm your guest count. Due to venue capacity, 
-                  we can only accommodate the number of guests listed on your invitation.
-                </p>
-              </div>
-            </div>
-          </div>
-
           {/* Contact */}
           <div className="animate-fade-in">
             <h3 className="text-xl sm:text-2xl font-serif mb-4 sm:mb-6 text-foreground">Still Have Questions?</h3>
